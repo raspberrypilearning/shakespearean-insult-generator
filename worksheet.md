@@ -25,7 +25,7 @@ The most basic way of creating a CSV file is to type data into a text file in CS
 
 ## Putting your insults into a CSV file
 
-1. You will need to find some suitable Shakespearean words to use. Make sure to only use Elizabethan insults - they are witty, intelligent and unlikely to actually offend your friends! We found a big list of [Shakespearean insults](https://www.theatrefolk.com/free-resources) on this page (scroll down to the "Fun activities" section).
+1. You will need to find some suitable Shakespearean words to use. Make sure to only use Shakespearean words as insults - they are witty, intelligent and unlikely to actually offend your friends! We found a big list of [Shakespearean insults](https://www.theatrefolk.com/free-resources) on this page (scroll down to the "Fun activities" section).
 
 1. Now open up a document in a spreadsheet editor. These instructions are for LibreOffice Calc, which is included on the latest distribution of Raspbian, but this process works in a very similar way in other spreadsheet programs such as Microsoft Excel. Copy and paste the first column of insults into your spreadsheet, pressing OK if a box pops up.
 
@@ -39,11 +39,11 @@ The most basic way of creating a CSV file is to type data into a text file in CS
 
   ![Save your file](images/saving-file.png)
 
-1. If a box pops up, choose to save the file in Text CSV format, and then press OK. Press OK on any further pop-ups.
+1. If a box pops up, choose to save the file in Text CSV format. Press OK on any further pop-ups.
 
   ![Save in text CSV format](images/use-text-csv.png)
 
-1. Once your file has been saved, you can check that the data is now in CSV format. Right click on the file and select "Text editor" to open it up as plain text. You should see the insults you pasted in, separated by commas.
+1. Once your file has been saved, you can check that the data is now in CSV format. Locate the file using the file explorer, then right click on the file and select "Text editor" to open it up as plain text. You should see the insults you pasted in, separated by commas.
 
   ![See the CSV format](images/see-format.png)
 
@@ -82,14 +82,13 @@ The most basic way of creating a CSV file is to type data into a text file in CS
 1. We will add some code to read the file line by line and split each column into a separate list. Try planning this yourself in pseudo code before looking at our solution below:
 
   ```
-  CREATE list_a, list_b, list_c
+  CREATE list_a, list_b, list_c as BLANK LISTS
   OPEN insults.csv in read mode
-    WHILE there are still lines left to read:
-      line = READ LINE
+    FOR each line in the file, READ INTO variable line
       words = line.SPLIT(",")
-      APPEND first word to list_a
-      APPEND second word to list_b
-      APPEND third word to list_c
+      APPEND first word IN words TO list_a
+      APPEND second word IN words TO list_b
+      APPEND third word IN words TO list_c
     END WHILE
   PRINT list_a
   ```
@@ -147,7 +146,7 @@ Now we have three lists, let's write a function to choose a random word from eac
   import random
   ```
 
-1. Immediately underneath, define a function called `insult_me()`
+1. Immediately underneath that, define a function called `insult_me()`
 
   ```python
   def insult_me():
@@ -160,7 +159,7 @@ Now we have three lists, let's write a function to choose a random word from eac
     word_a = random.choice(list_a)
   ```
 
-1. Still writing your code *inside the function*, use *concatenation* (a `+` symbol) to join the three words together, along with some spaces. The `+` is like the programmer's glue - it joins things together. The first part has been done for you here, but you need to finish it off:
+1. Still writing your code *inside the function*, use *concatenation* (a `+` symbol) to join the three words together, along with some spaces. The `+` is like the programmer's glue - it joins **strings** together. The first part has been done for you here, but you need to finish it off:
 
   ```python
   insult = "You " + word_a + " "
@@ -205,7 +204,7 @@ If you would like to make your insult generator easy to use, you could add a bas
 
   ![Blank app window](images/app-window.png)
 
-  You might notice that when you run the program, an insult is still printed out in the Python shell, even though we now want to display our insult on a GUI. This is because we coded the `insult_me()` function to *print* the insult rather than just generate it.
+  You might notice that when you run the program, an insult is still printed out in the Python shell, even though we now want to display our insult on the GUI. This is because we coded the `insult_me()` function to *print* the insult rather than just generate it.
 
 1. Go back to your `insult_me()` function and replace the line `print(insult)` with the line `return insult`. This will cause the insult to be passed back from the function so we can use it, instead of just printed out.
 
@@ -229,7 +228,7 @@ If you would like to make your insult generator easy to use, you could add a bas
 
   This code creates a `PushButton` widget and adds it to the `app`. The button will call the function `new_insult` (which we haven't written yet) when it is pressed, and will display the text `"Insult me again"`.
 
-1. Now let's write the function `new_insult()` which will be called when the button is pressed. You should put this code immediately after your `insult_me()` function, but be careful **not** to indent the first line of the function, otherwise Python will think this code is part of the `insult_me()` function too.
+1. Write the function `new_insult()` which will be called when the button is pressed. You should put this code immediately after your `insult_me()` function, but be careful **not** to indent the first line of the function, otherwise Python will think this code is part of the `insult_me()` function too.
 
   ```python
   def new_insult():
@@ -244,6 +243,7 @@ If you would like to make your insult generator easy to use, you could add a bas
 1. Run the program using `F5` and enjoy creating a stream of Shakespearean insults at the press of a button! The finished code is [here](code/shakespeare.py) if you want to check your code.
 
 ## What next
+- Could you change the colour or size of the text on the GUI?
+- Could you change the GUI so that it contains three drop down boxes, each containing one of the lists of words. Users can pick their own insult using the three drop down boxes?
 - Could you allow users to rate the insults and save the full insult plus its rating into a separate CSV file?
 - Could you read this CSV file and calculate the highest rated insult?
-- Could you change the GUI so that it contains three drop down boxes, each containing one of the lists of words. Users can pick their own insult using the three drop down boxes?
