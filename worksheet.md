@@ -19,7 +19,7 @@ Sometimes the values are **encapsulated**, for example they may be encapsulated 
 This is usually because the data itself contains commas, so we need to avoid confusion between where a comma represents a break between different data items, and where it is simply part of the data. For example in this CSV file encapsulation is definitely necessary:
 
 ```CSV
-"tabitha, slayer of mice", "tiddles, drinker of milk", "tiffany, leaver of hairballs"
+"Tabitha, slayer of mice", "Tiddles, drinker of milk", "Tiffany, leaver of hairballs"
 ```
 The most basic way of creating a CSV file is to type data into a text file in CSV format, and then save the file with the extension `.csv`. Alternatively you could use a program such as LibreOffice Calc or Microsoft Excel to create and save a file in CSV format.
 
@@ -75,7 +75,7 @@ The most basic way of creating a CSV file is to type data into a text file in CS
 
   Change the code and see if you can work out the difference betweeen `read()` and `readline()`
 
-1. So far we are able to read the insults from the file in the order they were written, but we can't do much with them. You may have noticed that the different columns forming the parts of the insult were different types of word. The first two columns (A and B) contain **adjectives** (describing words) and the final column (C) contains **nouns**, mostly in this case referring to a 'thing' the person resembles. If we could split them up, we could make insults of the form "You [List A] [List B] [List C]" by choosing a random word from each list. An example might be "You impertinent rump-fed miscreant".
+1. So far we are able to read the insults from the file in the order they were written, but we can't do much with them. You may have noticed that the different columns forming the parts of the insult were different types of word. The first two columns (A and B) contain **adjectives** (describing words) and the final column (C) contains **nouns**, mostly in this case referring to a 'thing' the person resembles. If we could split them up, we could make insults of the form "Thou [List A] [List B] [List C]" by choosing a random word from each list. An example might be "Thou impertinent rump-fed miscreant".
 
 ## Lists in Python
 
@@ -162,7 +162,7 @@ Now we have three lists, let's write a function to choose a random word from eac
 1. Still writing your code *inside the function*, use *concatenation* (a `+` symbol) to join the three words together, along with some spaces. The `+` is like the programmer's glue - it joins **strings** together. The first part has been done for you here, but you need to finish it off:
 
   ```python
-  insult = "You " + word_a + " "
+  insult = "Thou " + word_a + " "
   ```
 
 1. Finally, when you have created the full insult and stored it inside the variable `insult`, add another line of code inside the function to print the insult you have created:
