@@ -75,11 +75,11 @@ The most basic way of creating a CSV file is to type data into a text file in CS
 
   Change the code and see if you can work out the difference betweeen `read()` and `readline()`
 
-1. So far we are able to read the insults from the file in the order they were written, but we can't do much with them. You may have noticed that the different columns forming the parts of the insult were different types of word. The first two columns (A and B) contain **adjectives** (describing words) and the final column (C) contains **nouns**, mostly in this case referring to a 'thing' the person resembles. If we could split them up, we could make randomised insults of the form "You [List A] [List B] [List C]", for example "You impertinent rump-fed miscreant".
+1. So far we are able to read the insults from the file in the order they were written, but we can't do much with them. You may have noticed that the different columns forming the parts of the insult were different types of word. The first two columns (A and B) contain **adjectives** (describing words) and the final column (C) contains **nouns**, mostly in this case referring to a 'thing' the person resembles. If we could split them up, we could make insults of the form "You [List A] [List B] [List C]" by choosing a random word from each list. An example might be "You impertinent rump-fed miscreant".
 
 ## Lists in Python
 
-1. We will add some code to read the file line by line and split each column into a separate list. You could try planning this yourself in pseudo code before looking at our solution below:
+1. We will add some code to read the file line by line and split each column into a separate list. Try planning this yourself in pseudo code before looking at our solution below:
 
   ```
   CREATE list_a, list_b, list_c
@@ -87,9 +87,9 @@ The most basic way of creating a CSV file is to type data into a text file in CS
     WHILE there are still lines left to read:
       line = READ LINE
       words = line.SPLIT(",")
-      APPEND words[0] to list_a
-      APPEND words[1] to list_b
-      APPEND words[2] to list_c
+      APPEND first word to list_a
+      APPEND second word to list_b
+      APPEND third word to list_c
     END WHILE
   PRINT list_a
   ```
@@ -139,6 +139,111 @@ The most basic way of creating a CSV file is to type data into a text file in CS
 
 ## Randomly choosing an insult
 
+Now we have three lists, let's write a function to choose a random word from each list and create a new insult.
+
+1. At the very start of your program, import the random library
+
+  ```python
+  import random
+  ```
+
+1. Immediately underneath, define a function called `insult_me()`
+
+  ```python
+  def insult_me():
+  ```
+
+1. We can tell Python which code is inside the function by *indenting* the lines of code after the function definition. Add some code *inside the function* to choose a random word from `list_a`, `list_b` and `list_c`. The first word has been done for you in the example below, but you need to work out how to choose a random word from lists B and C yourself.
+
+  ```python
+  def insult_me():
+    word_a = random.choice(list_a)
+  ```
+
+1. Still writing your code *inside the function*, use *concatenation* (a `+` symbol) to join the three words together, along with some spaces. The `+` is like the programmer's glue - it joins things together. The first part has been done for you here, but you need to finish it off:
+
+  ```python
+  insult = "You " + word_a + " "
+  ```
+
+1. Finally, when you have created the full insult and stored it inside the variable `insult`, add another line of code inside the function to print the insult you have created:
+
+  ```python
+  print(insult)
+  ```
+
+1. If you run your program now, nothing new will happen. This is because code inside a function will not be executed until the function is **called**. Find the line of code in your program where you `print( list_a )` and delete it. In its place, call the function you just created:
+
+  ```python
+  insult_me()
+  ```
+
+1. Save and run your program using `F5`. You should see a random insult appear!
+
+    ![Generate an insult](images/insult.png)
+
+    Run your program again and you should see a different insult each time.
+
 ## Displaying the result on a GUI
 
-# Sorting the results
+If you would like to make your insult generator easy to use, you could add a basic GUI.
+
+1. At the start of your program, after the line of code where you imported the random library, import the guizero library:
+
+  ```python
+  from guizero import App, Text, PushButton
+  ```
+
+1. Now at the very end of your program, add code to create an `App`. This is a simple GUI window where we will display your insult.
+
+  ```python
+  app = App("Shakespearean insult generator")
+  app.display()
+  ```
+
+1. Save your code and run it using F5. You should see a mainly blank window pop up, with the title "Shakespearean insult generator".
+
+  ![Blank app window](images/app-window.png)
+
+  You might notice that when you run the program, an insult is still printed out in the Python shell, even though we now want to display our insult on a GUI. This is because we coded the `insult_me()` function to *print* the insult rather than just generate it.
+
+1. Go back to your `insult_me()` function and replace the line `print(insult)` with the line `return insult`. This will cause the insult to be passed back from the function so we can use it, instead of just printed out.
+
+1. Delete the line of code which calls the function `insult_me()`.
+
+1. Now add a `Text` widget to display your insult. This line of code should go between the `app =` line and the `app.display()` line:
+
+  ```python
+  message = Text(app, insult_me() )
+  ```
+
+  This code creates a `Text` widget, adds it to the `app`, and then calls the function `insult_me()` to get an insult to display.
+
+  ![Insult displayed in GUI](images/insult-in-gui.png)
+
+1. Now let's add a `PushButton` widget on the line immediately after the `Text` widget.
+
+  ```python
+  button = PushButton(app, new_insult, text="Insult me again")
+  ```
+
+  This code creates a `PushButton` widget and adds it to the `app`. The button will call the function `new_insult` (which we haven't written yet) when it is pressed, and will display the text `"Insult me again"`.
+
+1. Now let's write the function `new_insult()` which will be called when the button is pressed. You should put this code immediately after your `insult_me()` function, but be careful **not** to indent the first line of the function, otherwise Python will think this code is part of the `insult_me()` function too.
+
+  ```python
+  def new_insult():
+    new_insult = insult_me()
+    message.set(new_insult)
+  ```
+
+  This function calls the `insult_me()` function to generate a new random insult, and then sets the message on the GUI to be the newly generated insult.
+
+  ![Insult button](images/insult-me-again.png)
+
+1. Run the program using `F5` and enjoy creating a stream of Shakespearean insults at the press of a button! The finished code is [here](code/shakespeare.py) if you want to check your code.
+
+## What next
+- Could you allow users to rate the insults and save the full insult plus its rating into a separate CSV file?
+- Could you read this CSV file and calculate the highest rated insult?
+- Could you change the GUI so that it contains three drop down boxes, each containing one of the lists of words. Users can pick their own insult using the three drop down boxes?
