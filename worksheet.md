@@ -27,7 +27,7 @@ The most basic way of creating a CSV file is to type data into a text file in CS
 
 1. You will need to find some suitable Shakespearean words to use. Make sure to only use Shakespearean words as insults - they are witty, intelligent and unlikely to actually offend your friends! We found a big list of [Shakespearean insults](https://www.theatrefolk.com/free-resources) on this page (scroll down to the "Fun activities" section).
 
-1. Now open up a document in a spreadsheet editor. These instructions are for LibreOffice Calc, which is included on the latest distribution of Raspbian, but this process works in a very similar way in other spreadsheet programs such as Microsoft Excel. Copy the first column of insults from the pdf file. Now right click on cell A1 in your spreadsheet and select **Paste Special**, then in the popup box, make sure **Unformatted text** is selected before pressing OK, and then press OK again when you are presented with the box below.
+1. Now open up a document in a spreadsheet editor. These instructions are for LibreOffice Calc, which is included on the latest distribution of Raspbian, but this process works in a very similar way in other spreadsheet programs such as Microsoft Excel. Copy the first column of insults from the pdf file. Now right click on cell A1 in your spreadsheet and select **Paste Special**. In the popup box which appears, make sure **Unformatted text** is selected before pressing OK. Then press OK again when you are presented with the box below.
 
   ![Paste dialogue](images/paste-dialogue.png)
 
