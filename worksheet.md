@@ -187,7 +187,7 @@ Now we have three lists, let's write a function to choose a random word from eac
   insult = "Thou" + word_a + " " + word_b + word_c
   ```
 
-  See if you can work out where to *concatenate* in more spaces to make the insult display properly.
+  See if you can work out where to *concatenate* in more spaces to make the insult display properly. You could even concatenate a `"!"` onto the end of your insult if you like.
 
 1. Save and run your program using `F5`. You should see a random insult appear!
 
