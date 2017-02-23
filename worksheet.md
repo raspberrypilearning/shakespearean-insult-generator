@@ -1,6 +1,6 @@
 # Shakespearean insult generator
 
-Ever been lost for words? In this resource you will write a Python script to generate insults, Elizabethan style.
+Ever been in the frustrating situation of being insulted by someone and wishing you had a bitingly funny zinger to come back with? In this resource you will write a Python script to generate insults, Elizabethan style.
 
 ## What is a CSV file?
 
@@ -27,9 +27,14 @@ The most basic way of creating a CSV file is to type data into a text file in CS
 
 1. You will need to find some suitable Shakespearean words to use. Make sure to only use Shakespearean words as insults - they are witty, intelligent and unlikely to actually offend your friends! We found a big list of [Shakespearean insults](https://www.theatrefolk.com/free-resources) on this page (scroll down to the "Fun activities" section).
 
-1. Now open up a document in a spreadsheet editor. These instructions are for LibreOffice Calc, which is included on the latest distribution of Raspbian, but this process works in a very similar way in other spreadsheet programs such as Microsoft Excel. Copy and paste the first column of insults into your spreadsheet, pressing OK if a box pops up.
+1. Now open up a document in a spreadsheet editor. These instructions are for LibreOffice Calc, which is included on the latest distribution of Raspbian, but this process works in a very similar way in other spreadsheet programs such as Microsoft Excel. Copy the first column of insults from the pdf file. Now right click on cell A1 in your spreadsheet and select **Paste Special**, then in the popup box, make sure **Unformatted text** is selected before pressing OK, and then press OK again when you are presented with the box below.
+
+  ![Paste dialogue](images/paste-dialogue.png)
+
+  You should see your insult words displayed in the spreadsheet, with one word in each row, like this:
 
   ![First column of insults](images/first-column.png)
+
 
 1. Repeat this for the second and third columns, pasting them into columns B and C of the spreadsheet.
 
@@ -53,7 +58,7 @@ The most basic way of creating a CSV file is to type data into a text file in CS
 
 1. Click `File` > `New File` and save the file as `shakespeare.py`
 
-1. Add the following code to open the file in read mode, read the full contents, and output the result:
+1. Add the following code to open the file (`insults.csv`) in read mode (`"r"` means *read mode*), read the full contents, and output the result:
 
   ```python
   with open("insults.csv", "r") as f:
@@ -85,7 +90,7 @@ The most basic way of creating a CSV file is to type data into a text file in CS
   CREATE list_a, list_b, list_c as BLANK LISTS
   OPEN insults.csv in read mode
     FOR each line in the file, READ INTO variable line
-      words = line.SPLIT(",")
+      words = SPLIT line EVERY "," INTO A LIST
       APPEND first word IN words TO list_a
       APPEND second word IN words TO list_b
       APPEND third word IN words TO list_c
@@ -95,7 +100,7 @@ The most basic way of creating a CSV file is to type data into a text file in CS
 
   The most unfamiliar part of this code is probably `words = SPLIT(line, ",")`. Here we will use Python's built in `split()` function to split up the line of text wherever there is a comma, and save the results as a list called `words`.
 
-1. Here is the corresponding Python code for the code we planned above. Once again, you could have a go at translating your pseudo code into Python before you look at the solution below.
+1. Here is the corresponding Python code for the code we planned above. Once again, you could have a go at translating your pseudo code into Python before you look at the solution below. Delete your existing code and replace it with the new code:
 
   ```python
   list_a = []
@@ -159,15 +164,10 @@ Now we have three lists, let's write a function to choose a random word from eac
     word_a = random.choice(list_a)
   ```
 
-1. Still writing your code *inside the function*, use *concatenation* (a `+` symbol) to join the three words together, along with some spaces. The `+` is like the programmer's glue - it joins **strings** together. The first part has been done for you here, but you need to finish it off:
+1. Still writing your code *inside the function*, construct your insult, using the *concatenation* symbol (`+`) to join the words together. Then add a `print` statement to display the insult:
 
   ```python
-  insult = "Thou " + word_a + " "
-  ```
-
-1. Finally, when you have created the full insult and stored it inside the variable `insult`, add another line of code inside the function to print the insult you have created:
-
-  ```python
+  insult = "Thou" + word_a + word_b + word_c
   print(insult)
   ```
 
@@ -177,6 +177,14 @@ Now we have three lists, let's write a function to choose a random word from eac
   insult_me()
   ```
 
+1. Save your program and run it using `F5`. You should see a random insult, but there is a problem - the words are all stuck together with no spaces in between! The `+` is like the programmer's glue - it joins **strings** together. The string for a space is `" "`, so we could alter the code and put a space between `word_a` and `word_b` like this:
+
+  ```python
+  insult = "Thou" + word_a + " " + word_b + word_c
+  ```
+
+  See if you can work out where to *concatenate* in more spaces to make the insult display properly.
+
 1. Save and run your program using `F5`. You should see a random insult appear!
 
     ![Generate an insult](images/insult.png)
@@ -185,7 +193,7 @@ Now we have three lists, let's write a function to choose a random word from eac
 
 ## Displaying the result on a GUI
 
-If you would like to make your insult generator easy to use, you could add a basic GUI.
+If you would like to make your insult generator easy to use, you could add a basic GUI. Ensure you have followed the [software installation instructions](software.md) to install the guizero library before attempting this section.
 
 1. At the start of your program, after the line of code where you imported the random library, import the guizero library:
 
@@ -210,23 +218,23 @@ If you would like to make your insult generator easy to use, you could add a bas
 
 1. Delete the line of code which calls the function `insult_me()`.
 
-1. Now add a `Text` widget to display your insult. This line of code should go between the `app =` line and the `app.display()` line:
+1. Now add some `Text` to display your insult. This line of code should go between the `app =` line and the `app.display()` line:
 
   ```python
   message = Text(app, insult_me() )
   ```
 
-  This code creates a `Text` widget, adds it to the `app`, and then calls the function `insult_me()` to get an insult to display.
+  This line of code creates a `Text` object, adds it to the `app`, and then calls the function `insult_me()` to get an insult to display.
 
   ![Insult displayed in GUI](images/insult-in-gui.png)
 
-1. Now let's add a `PushButton` widget on the line immediately after the `Text` widget.
+1. Now let's add a `PushButton` on the line immediately after the `Text`.
 
   ```python
   button = PushButton(app, new_insult, text="Insult me again")
   ```
 
-  This code creates a `PushButton` widget and adds it to the `app`. The button will call the function `new_insult` (which we haven't written yet) when it is pressed, and will display the text `"Insult me again"`.
+  This code creates a `PushButton` object and adds it to the `app`. The button will call the function `new_insult` (which we haven't written yet) when it is pressed, and will display the text `"Insult me again"`.
 
 1. Write the function `new_insult()` which will be called when the button is pressed. You should put this code immediately after your `insult_me()` function, but be careful **not** to indent the first line of the function, otherwise Python will think this code is part of the `insult_me()` function too.
 
