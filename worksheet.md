@@ -98,7 +98,7 @@ The most basic way of creating a CSV file is to type data into a text file in CS
   PRINT list_a
   ```
 
-  The most unfamiliar part of this code is probably `words = SPLIT(line, ",")`. Here we will use Python's built in `split()` function to split up the line of text wherever there is a comma, and save the results as a list called `words`.
+  The most unfamiliar part of this code is probably `words = SPLIT line EVERY "," INTO A LIST`. Here we will use Python's built in `split()` function to split up the line of text wherever there is a comma, and save the results as a list called `words`.
 
 1. Here is the corresponding Python code for the code we planned above. Once again, you could have a go at translating your pseudo code into Python before you look at the solution below. Delete your existing code and replace it with the new code:
 
@@ -177,7 +177,11 @@ Now we have three lists, let's write a function to choose a random word from eac
   insult_me()
   ```
 
-1. Save your program and run it using `F5`. You should see a random insult, but there is a problem - the words are all stuck together with no spaces in between! The `+` is like the programmer's glue - it joins **strings** together. The string for a space is `" "`, so we could alter the code and put a space between `word_a` and `word_b` like this:
+1. Save your program and run it using `F5`. You should see a random insult, but there is a problem - the words are all stuck together with no spaces in between!
+
+  ![Unspaced insult](images/unspaced-insult.png)
+
+  The `+` is like the programmer's glue - it joins **strings** together. The string for a space is `" "`, so we could alter the code and put a space between `word_a` and `word_b` like this:
 
   ```python
   insult = "Thou" + word_a + " " + word_b + word_c
