@@ -61,11 +61,11 @@ The most basic way of creating a CSV file is to type data into a text file in CS
 
 1. Add the following code to open the file (`insults.csv`) in read mode (`"r"` means *read mode*), read the full contents, and output the result:
 
-  ```python
-  with open("insults.csv", "r") as f:
-    contents = f.read()
-    print(contents)
-  ```
+    ```python
+    with open("insults.csv", "r") as f:
+        contents = f.read()
+        print(contents)
+    ```
 
 1. What's the difference between the current line of code...
 
@@ -119,7 +119,7 @@ The most basic way of creating a CSV file is to type data into a text file in CS
 
 
   ```
- 
+
 1. Save and run your program by pressing F5. You should find that the program outputs a list of all of the words you put in column A.
 
   ![Print list A](images/output-a.png)
@@ -156,16 +156,16 @@ Now we have three lists, let's write a function to choose a random word from eac
 
 1. Immediately underneath that, define a function called `insult_me()`:
 
-  ```python
-  def insult_me():
-  ```
+    ```python
+    def insult_me():
+    ```
 
 1. We can tell Python which code is inside the function by *indenting* the lines of code after the function definition. Add some code *inside the function* to choose a random word from `list_a`, `list_b`, and `list_c`. The first word has been done for you in the example below, but you need to work out how to choose a random word from lists B and C yourself.
 
-  ```python
-  def insult_me():
-    word_a = random.choice(list_a)
-  ```
+    ```python
+    def insult_me():
+        word_a = random.choice(list_a)
+    ```
 
 1. Still writing your code *inside the function*, construct your insult, using the *concatenation* symbol (`+`) to join the words together. Then add a `print` statement to display the insult:
 
@@ -245,11 +245,11 @@ If you would like to make your insult generator easy to use, you could add a bas
 
 1. Write the function `new_insult()` which will be called when the button is pressed. You should put this code immediately after your `insult_me()` function, but be careful **not** to indent the first line of the function, otherwise Python will think this code is part of the `insult_me()` function too.
 
-  ```python
-  def new_insult():
-    new_insult = insult_me()
-    message.set(new_insult)
-  ```
+    ```python
+    def new_insult():
+        new_insult = insult_me()
+        message.set(new_insult)
+    ```
 
   This function calls the `insult_me()` function to generate a new random insult, and then sets the message on the GUI to be the newly generated insult.
 
