@@ -1,6 +1,6 @@
 ## Displaying the result on a GUI
 
-If you would like to make your insult generator easy to use, you could add a basic GUI. Ensure you have followed the [software installation instructions](software.md) to install the `guizero` library before attempting this section.
+If you would like to make your insult generator easy to use, you could add a basic GUI. Ensure you have followed the [software installation instructions](what-you-will-need) to install the `guizero` library before attempting this section.
 
 - At the start of your program, after the line of code where you imported the `random` library, import the `guizero` library:
 
