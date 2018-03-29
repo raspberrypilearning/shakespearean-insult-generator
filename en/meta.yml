@@ -1,8 +1,7 @@
 ---
 title: Shakespearean insult generator
 hero_image: images/banner.png
-description: In this resource you will write a Python script to generate insults,
-  Elizabethan-style.
+description: In this resource you will write a Python script to generate insults, Elizabethan-style.
 original_url: https://raspberrypi.org/learning/shakespearean-insult-generator
 theme: red
 duration: 2
