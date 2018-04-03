@@ -8,11 +8,15 @@ duration: 2
 listed: true
 ingredient: false
 copyedit: true
-curriculum: creator, design-0, programming-0, phys-comp-0, manufacture-0, community-0
-interests: ''
-technologies: python
-site_areas: ''
-steps:
+curriculum: 3, design-0, programming-3, phys-comp-0, manufacture-0, community-0
+interests: literature
+technologies: raspberry-pi, python
+site_areas: projects
+hardware: raspberry-pi
+software: python
+version: 3
+last_tested: 2017-01-01
+steps: 
 - title: Introduction
 - title: What you will need
 - title: Shakespearean insult generator
@@ -23,4 +27,3 @@ steps:
 - title: Randomly choosing an insult
 - title: Displaying the result on a GUI
 - title: What next
-

@@ -11,5 +11,5 @@ By creating a Shakespearean insult generator with your Raspberry Pi you will lea
 
 This resource covers elements from the following strands of the [Raspberry Pi Digital Making Curriculum](https://www.raspberrypi.org/curriculum/):
 
-- [Apply higher-order programming techniques to solve real-world problems](https://www.raspberrypi.org/curriculum/programming/maker)
+- [Apply abstraction and decomposition to solve more complex problems](https://curriculum.raspberrypi.org/programming/developer/)
 
