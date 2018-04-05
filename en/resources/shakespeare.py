@@ -10,7 +10,7 @@ def insult_me():
 
 def new_insult():
     new_insult = insult_me()
-    message.set(new_insult)
+    message.value = new_insult
 
 list_a = []
 list_b = []
