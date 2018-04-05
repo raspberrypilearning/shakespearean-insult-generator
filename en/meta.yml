@@ -10,9 +10,9 @@ ingredient: false
 copyedit: true
 curriculum: 3, design-0, programming-3, phys-comp-0, manufacture-0, community-0
 interests: literature
-technologies: raspberry-pi, python
+technologies: python
 site_areas: projects
-hardware: raspberry-pi
+hardware: ''
 software: python
 version: 3
 last_tested: 2017-01-01
