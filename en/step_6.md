@@ -1,6 +1,6 @@
 ## Open and read from a file
 
-- Now we need to read this file of insults into Python. From the **Programming** menu, open up **Python 3 (IDLE)**.
+- Open up **Python 3 IDLE**.
 
 - Click `File` > `New File` and save the file as `shakespeare.py`.
 

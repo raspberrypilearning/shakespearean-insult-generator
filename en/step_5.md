@@ -1,8 +1,10 @@
 ## Putting your insults into a CSV file
 
-- You will need to find some suitable Shakespearean words to use. Make sure to only use Shakespearean words as insults - they are witty, intelligent, and unlikely to actually offend your friends! We found a big list of [Shakespearean insults](https://www.theatrefolk.com/free-resources) (scroll down to the "Fun activities" section).
+You will need to find some suitable Shakespearean words to use. Make sure to only use Shakespearean words as insults - they are witty, intelligent, and unlikely to actually offend your friends! We found a big list of [Shakespearean insults](https://www.theatrefolk.com/freebies/shakespearean-insults.pdf).
 
-- Now open up a document in a spreadsheet editor. These instructions are for LibreOffice Calc, which is included on the latest distribution of Raspbian, but this process works in a very similar way in other spreadsheet programs such as Microsoft Excel. Copy the first column of insults from the PDF file. Now right-click on cell A1 in your spreadsheet and select **Paste Special**. In the pop up box which appears, make sure **Unformatted text** is selected before pressing OK. Then press OK again when you're presented with the box below.
+You can create your own insults CSV file by following the instruction below or download a pre-built [insults.csv](resources/insults.csv) file.
+
+- Now open up a document in a spreadsheet editor. These instructions are for LibreOffice Calc, which is included on the latest distribution of Raspbian, but this process works in a very similar way in other spreadsheet programs such as Microsoft Excel. Copy the first column of insults from the **Shakespearean Insults** PDF file. Now right-click on cell A1 in your spreadsheet and select **Paste Special**. In the pop up box which appears, make sure **Unformatted text** is selected before pressing OK. Then press OK again when you're presented with the box below.
 
   ![Paste dialogue](images/paste-dialogue.png)
 
