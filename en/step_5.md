@@ -1,6 +1,6 @@
 ## Putting your insults into a CSV file
 
-You will need to find some suitable Shakespearean words to use. Make sure to only use Shakespearean words as insults - they are witty, intelligent, and unlikely to actually offend your friends! We found a big list of [Shakespearean insults](https://www.theatrefolk.com/freebies/shakespearean-insults.pdf) on [www.theatrefolk.com](https://www.theatrefolk.com/free-resources/shakespeare).
+You will need to find some suitable Shakespearean words to use. Make sure to only use Shakespearean words as insults - they are witty, intelligent, and unlikely to actually offend your friends! We found a big list of [Shakespearean insults](https://www.theatrefolk.com/freebies/shakespearean-insults.pdf) on [www.theatrefolk.com](https://www.theatrefolk.com).
 
 You can create your own insults CSV file by following the instruction below or download a pre-built [insults.csv](resources/insults.csv) file.
 
