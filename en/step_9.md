@@ -48,7 +48,7 @@ If you would like to make your insult generator easy to use, you could add a bas
     ```python
     def new_insult():
         new_insult = insult_me()
-        message.set(new_insult)
+        message.value = new_insult
     ```
 
   This function calls the `insult_me()` function to generate a new random insult, and then sets the message on the GUI to be the newly generated insult.
