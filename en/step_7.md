@@ -19,7 +19,6 @@
 - Here is the corresponding Python code for the code we planned above. Once again, you could have a go at translating your pseudocode into Python before you look at the solution below. Delete your existing code and replace it with the new code:
 
 --- collapse ---
-
 ---
 title: Show the code
 ---
