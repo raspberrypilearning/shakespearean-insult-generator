@@ -1,6 +1,6 @@
-## Lists in Python
+## Lijsten in Python
 
-- We will add some code to read the file line by line and split each column into a separate list. Try planning this yourself in pseudocode before looking at our solution below:
+- We zullen code toevoegen om het bestand regel voor regel te lezen en elke kolom in een afzonderlijke lijst te splitsen. Probeer dit zelf in pseudocode te plannen voordat je onze onderstaande oplossing bekijkt:
 
   ```
   CREATE list_a, list_b, list_c as BLANK LISTS
@@ -14,13 +14,13 @@
   PRINT list_a
   ```
 
-  The most unfamiliar part of this code is probably `words = SPLIT line EVERY "," INTO A LIST`. Here we will use Python's built-in `split()` function to split up the line of text wherever there's a comma, and save the results as a list called `words`.
+  Het meest onbekende deel van deze code is waarschijnlijk `words = SPLIT line EVERY "," INTO A LIST`. Hier zullen we de ingebouwde `split()` functie van Python gebruiken om de tekstregel op te splitsen waar een komma is en de resultaten op te slaan als een lijst met de naam `woorden`.
 
-- Here is the corresponding Python code for the code we planned above. Once again, you could have a go at translating your pseudocode into Python before you look at the solution below. Delete your existing code and replace it with the new code:
+- Hier is de overeenkomstige Python-code voor de code die we hierboven hadden gepland. Nogmaals, je kunt jouw pseudocode in Python vertalen voordat je naar de onderstaande oplossing kijkt. Verwijder jouw bestaande code en vervang deze door de nieuwe code:
 
 --- collapse ---
 ---
-title: Show the code
+title: toon de code
 ---
 
   ```python
@@ -42,25 +42,25 @@ title: Show the code
 
 --- /collapse ---
 
-- Save and run your program by pressing F5. You should find that the program outputs a list of all of the words you put in column A.
+- Sla jouw programma op en druk op F5. Je zult erachter komen dat het programma een lijst uitvoert met alle woorden die je in kolom A plaatst.
 
-  ![Print list A](images/output-a.png)
+  ![Lijst afdrukken A](images/output-a.png)
 
-- Change your code to print out and check lists B and C too. You should spot a problem.
+- Wijzig jouw code om ook de lijsten B en C af te drukken en te controleren. Je zou een probleem moeten ontdekken.
 
-When you output `list_c` to check it, you will notice something strange - an extra `\n` character has been added to the end of each of the words:
+Wanneer je `list_c` uitvoert om het te controleren, zul je iets vreemds opmerken - er is een extra `\n` teken toegevoegd aan het einde van elk van de woorden:
 
-  ![Print list C](images/output-c.png)
+  ![Lijst afdrukken C](images/output-c.png)
 
-  The `\n` character is not a surprise when you find out that it means "new line". It's there because in our original CSV file, each group of three insult words was stored on a *new line*! However, we don't want to display it in our insult, so we can add some code to get rid of it.
+  Het karakter `\n` is geen verrassing als je erachter komt dat het "nieuwe regel" betekent. Het is er omdat in ons oorspronkelijke CSV-bestand elke groep van drie beledigende woorden werd opgeslagen op een *nieuwe regel*! We willen het echter niet in onze belediging weergeven, dus we kunnen wat code toevoegen om er vanaf te komen.
 
-- Find this line in your code:
+- Zoek deze regel in jouw code:
 
   ```python
   list_c.append(words[2])
   ```
 
-  ...and add `.strip()` on the end of the word you're appending, to automatically strip out the `\n` and any other **whitespace characters**.
+  ... en voeg `.strip()` aan het einde van het woord dat je toevoegt, om automatisch de `\n` en alle andere **witruimte-tekens** te verwijderen.
 
   ```python
   list_c.append( words[2].strip() )
