@@ -1,7 +1,7 @@
-## What next
+## Wat kun je verder nog doen
 
-- Could you change the colour or size of the text on the GUI? Check out the [documentation](https://lawsie.github.io/guizero/text/) to help you.
-- Could you change the GUI so that it contains three drop-down boxes, each containing one of the lists of words? Users can pick their own insult using the three drop-down boxes.
-- Could you allow users to rate the insults, and save the full insult plus its rating into a separate CSV file?
-- Could you read this CSV file and calculate the highest-rated insult?
+- Kun je de kleur of grootte van de tekst op de GUI wijzigen? Bekijk ook de [documentatie](https://lawsie.github.io/guizero/text/) om je te helpen.
+- Kun je de GUI zo wijzigen dat deze drie keuzelijsten bevat die elk een van de woordenlijst bevatten? Gebruikers kunnen hun eigen belediging kiezen met behulp van de drie vervolgkeuzelijsten.
+- Kun je gebruikers de beledigingen laten beoordelen en de volledige belediging plus de beoordeling ervan in een afzonderlijk CSV-bestand opslaan?
+- Kun je dit CSV-bestand lezen en de best beoordeelde belediging berekenen?
 
