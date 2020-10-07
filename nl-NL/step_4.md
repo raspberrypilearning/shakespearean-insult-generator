@@ -1,22 +1,22 @@
-## What is a CSV file?
+## Wat is een CSV-bestand?
 
-A **Comma Separated Values** file (or CSV file as it's commonly known) is a very basic way of storing data for use in a Python program. It's simply a text file where the contents are in a specific format: separated by commas. For instance, this could be an example of data stored in a CSV file:
+Een **Comma Separated Values** bestand (of CSV-bestand zoals het algemeen bekend is) is een zeer eenvoudige manier om gegevens op te slaan voor gebruik in een Python-programma. Het is gewoon een tekstbestand waarvan de inhoud een specifiek formaat heeft: gescheiden door komma's. Dit kan bijvoorbeeld een voorbeeld zijn van gegevens die zijn opgeslagen in een CSV-bestand:
 
 ```CSV
-john, paul, george, ringo
+John, Paul, George, Ringo
 ```
 
-Sometimes the values are **encapsulated**. For example, they may be encapsulated with quotes like this:
+Soms zijn de waarden **ingesloten**. Ze kunnen bijvoorbeeld worden ingesloten in aanhalingstekens zoals deze:
 
 ```CSV
 "john", "paul", "george", "ringo"
 ```
 
-This is usually because the data itself contains commas, so we need to avoid confusion between where a comma represents a break between different data items, and where it's simply part of the data. For example, in this CSV file encapsulation is definitely necessary:
+Dit komt meestal omdat de gegevens zelf komma's bevatten, dus we moeten verwarring vermijden tussen waar een komma een breuk vertegenwoordigt tussen verschillende gegevensitems, en waar het gewoon een deel van de gegevens is. In dit CSV-bestand is insluiting bijvoorbeeld absoluut noodzakelijk:
 
 ```CSV
 "Tabitha, slayer of mice", "Tiddles, drinker of milk", "Tiffany, leaver of hairballs"
 ```
 
-The most basic way of creating a CSV file is to type data into a text file in CSV format, and then save the file with the extension `.csv`. Alternatively, you could use a program such as LibreOffice Calc or Microsoft Excel to create and save a file in CSV format.
+De meest eenvoudige manier om een CSV-bestand te maken, is door gegevens in een tekstbestand in CSV-indeling te typen en het bestand vervolgens op te slaan met de extensie `.csv`. Als alternatief kun je een programma zoals LibreOffice Calc of Microsoft Excel gebruiken om een bestand in CSV-indeling te maken en op te slaan.
 
