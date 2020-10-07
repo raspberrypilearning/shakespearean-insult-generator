@@ -1,7 +1,7 @@
 ---
-title: Shakespearean insult generator
+title: Shakespeare-beledigingsgenerator
 hero_image: images/banner.png
-description: In this resource you will write a Python script to generate insults, Elizabethan-style.
+description: In deze bron zul je een Python-script schrijven om beledigingen te genereren, in Elizabethaanse stijl.
 original_url: https://raspberrypi.org/learning/shakespearean-insult-generator
 theme: red
 duration: 2
@@ -18,22 +18,22 @@ version: 3
 last_tested: 2018-04-05
 steps:
   - 
-    title: Introduction
+    title: Inleiding
   - 
-    title: What you will need
+    title: Wat heb je nodig
   - 
-    title: Shakespearean insult generator
+    title: Shakespeare-beledigingsgenerator
   - 
-    title: What is a CSV file?
+    title: Wat is een CSV-bestand?
   - 
-    title: Putting your insults into a CSV file
+    title: Je beledigingen in een CSV-bestand stoppen
   - 
-    title: Open and read from a file
+    title: Openen en lezen vanuit een bestand
   - 
-    title: Lists in Python
+    title: Lijsten in Python
   - 
-    title: Randomly choosing an insult
+    title: Willekeurig een belediging kiezen
   - 
-    title: Displaying the result on a GUI
+    title: Het resultaat weergeven op een GUI
   - 
-    title: What next
+    title: Wat kun je verder nog doen
