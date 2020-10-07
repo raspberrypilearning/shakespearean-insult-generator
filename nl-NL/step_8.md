@@ -1,54 +1,54 @@
-## Randomly choosing an insult
+## Willekeurig een belediging kiezen
 
-Now we have three lists, let's write a function to choose a random word from each list and create a new insult.
+Nu hebben we drie lijsten, laten we een functie schrijven om uit elke lijst een willekeurig woord te kiezen en een nieuwe belediging te maken.
 
-- At the very start of your program, import the `random` library:
+- Aan het begin van je programma importeer je de `willekeurige` bibliotheek:
 
   ```python
   import random
   ```
 
-- Immediately underneath that, define a function called `insult_me()`:
+- Direct daaronder definieer je een functie met de naam `insult_me()`:
 
     ```python
     def insult_me():
     ```
 
-- We can tell Python which code is inside the function by *indenting* the lines of code after the function definition. Add some code *inside the function* to choose a random word from `list_a`, `list_b`, and `list_c`. The first word has been done for you in the example below, but you need to work out how to choose a random word from lists B and C yourself.
+- We kunnen Python vertellen welke code binnen de functie valt door de code regels te laten *inspringen* na de definitie van de functie. Voeg code *binnen de functie* toe om een willekeurig woord te kiezen uit `list_a`, `list_b` en `list_c`. Het eerste woord is in het onderstaande voorbeeld voor je gedaan, maar je moet zelf bepalen hoe je een willekeurig woord uit de lijsten B en C kunt kiezen.
 
     ```python
     def insult_me():
         word_a = random.choice(list_a)
     ```
 
-- Still writing your code *inside the function*, construct your insult, using the *concatenation* symbol (`+`) to join the words together. Then add a `print` statement to display the insult:
+- Schrijf nog steeds je code *binnen de functie*, construeer je belediging en gebruik het *samenvoeg* symbool (`+`) om de woorden samen te voegen. Voeg vervolgens een instructie voor `afdrukken` toe om de belediging weer te geven:
 
   ```python
   insult = "Thou" + word_a + word_b + word_c
   print(insult)
   ```
 
-- If you run your program now, nothing new will happen. This is because code inside a function won't be executed until the function is **called**. Find the line of code in your program where you `print( list_a )` and delete it. In its place, call the function you just created:
+- Als je jouw programma nu uitvoert, gebeurt er niets nieuws. Dit komt omdat code binnen een functie pas wordt uitgevoerd als de functie **wordt aangeroepen**. Zoek de coderegel in jouw programma waar je `print (list_a)` en verwijder deze. Roep in plaats daarvan de functie op die je zojuist hebt gemaakt:
 
   ```python
   insult_me()
   ```
 
-- Save your program and run it using F5. You should see a random insult, but there's a problem - the words are all stuck together with no spaces in between!
+- Sla jouw programma op en voer het uit met F5. Je zou een willekeurige belediging moeten zien, maar er is een probleem - de woorden zitten allemaal aan elkaar zonder spaties ertussen!
 
-  ![Unspaced insult](images/unspaced-insult.png)
+  ![Ongerepte belediging](images/unspaced-insult.png)
 
-  The `+` is like the programmer's glue - it joins **strings** together. The string for a space is `" "`, so we could alter the code and put a space between `word_a` and `word_b` like this:
+  De `+` is als de lijm van de programmeur - hij verbindt **strings** samen. De tekenreeks voor een spatie is `" "`, dus we kunnen als volgt de code wijzigen en een spatie plaatsen tussen `word_a` en `word_b`:
 
   ```python
   insult = "Thou" + word_a + " " + word_b + word_c
   ```
 
-  See if you can work out where to *concatenate* more spaces to make the insult display properly. You could even concatenate a `"!"` onto the end of your insult if you like.
+  Kijk of je kunt bepalen waar je meer spaties moet *toevoegen* om de belediging op het scherm goed te maken. Je kunt zelfs een `"!"` toevoegen op het einde van je belediging als je wilt.
 
-- Save and run your program using F5. You should see a random insult appear!
+- Sla jouw programma op en voer het uit met F5. Je zou een willekeurige belediging moeten zien verschijnen!
 
-    ![Generate an insult](images/insult.png)
+    ![Genereer een belediging](images/insult.png)
 
-    Run your program again and you should see a different insult each time.
+    Voer je programma opnieuw uit en je zou elke keer een andere belediging moeten zien.
 
