@@ -1,49 +1,49 @@
-## Displaying the result on a GUI
+## Het resultaat weergeven op een GUI
 
-If you would like to make your insult generator easy to use, you could add a basic GUI. Ensure you have followed the [software installation instructions](https://learning-admin.raspberrypi.org/en/projects/shakespearean-insult-generator/what-you-will-need) to install the `guizero` library before attempting this section.
+Als je jouw beledigingsgenerator gebruiksvriendelijk wilt maken, kunt je een eenvoudige GUI toevoegen. Zorg ervoor dat je [software-installatie-instructies](https://learning-admin.raspberrypi.org/en/projects/shakespearean-insult-generator/what-you-will-need) hebt gevolgd om de `guizero` bibliotheek te installeren voordat je dit gedeelte probeert.
 
-- At the start of your program, after the line of code where you imported the `random` library, import the `guizero` library:
+- Aan het begin van jouw programma, na de coderegel waar je de `random` bibliotheek hebt geïmporteerd, importeer je de `guizero` bibliotheek:
 
   ```python
   from guizero import App, Text, PushButton
   ```
 
-- Now at the very end of your program, add code to create an `App`. This is a simple GUI window where we will display your insult.
+- Voeg nu helemaal aan het einde van jouw programma code toe om een `app` te maken. Dit is een eenvoudig GUI-venster waar we jouw belediging zullen tonen.
 
   ```python
   app = App("Shakespearean insult generator")
   app.display()
   ```
 
-- Save your code and run it using F5. You should see a mainly blank window pop up, with the title "Shakespearean insult generator".
+- Sla jouw code op en voer deze uit met F5. Je zou een hoofdzakelijk leeg venster moeten zien verschijnen, met de titel "Shakespearean insult generator".
 
-  ![Blank app window](images/app-window.png)
+  ![Leeg app-venster](images/app-window.png)
 
-  You might notice that when you run the program, an insult is still printed out in the Python shell, even though we now want to display our insult on the GUI. This is because we coded the `insult_me()` function to *print* the insult rather than just generate it.
+  Het valt je misschien op dat wanneer je het programma uitvoert, er nog steeds een belediging wordt afgedrukt in de Python-shell, ook al willen we onze belediging nu op de GUI weergeven. Dit komt omdat we de functie `insult_me()` hebben gecodeerd om de belediging *af te drukken* plaats van deze alleen te genereren.
 
-- Go back to your `insult_me()` function and replace the line `print(insult)` with the line `return insult`. This will cause the insult to be passed back from the function so we can use it, instead of just printing it out.
+- Ga terug naar je `insult_me()` functie en vervang de regel `print(insult)` door de regel `return insult`. Dit zal ervoor zorgen dat de belediging van de functie wordt teruggegeven, zodat we het kunnen gebruiken, in plaats van het gewoon af te drukken.
 
-- Delete the line of code which calls the function `insult_me()`.
+- Verwijder de coderegel die de functie `insult_me()`aanroept.
 
-- Now add some `Text` to display your insult. This line of code should go between the `app =` line and the `app.display()` line:
+- Voeg nu wat`tekst` toe om je belediging weer te geven. Deze coderegel moet tussen de `app =` regel en de `app.display()` regel staan:
 
   ```python
   message = Text(app, insult_me() )
   ```
 
-  This line of code creates a `Text` object, adds it to the `app`, and then calls the function `insult_me()` to get an insult to display.
+  Deze lijn van code wordt een `Text` object, voegt het toe aan de `app`, en roep vervolgens de functie `insult_me()` aan om een weergave te krijgen van de belediging.
 
-  ![Insult displayed in GUI](images/insult-in-gui.png)
+  ![Belediging weergegeven in GUI](images/insult-in-gui.png)
 
-- Now let's add a `PushButton` on the line immediately after the `Text`.
+- Laten we nu een `druk knop` toevoegen aan de regel direct na de `tekst`.
 
   ```python
   button = PushButton(app, new_insult, text="Insult me again")
   ```
 
-  This code creates a `PushButton` object and adds it to the `app`. The button will call the function `new_insult` (which we haven't written yet) when it's pressed, and will display the text `"Insult me again"`.
+  Deze code maakt een `PushButton` object en voegt dit toe aan de `app`. De knop roept de functie `new_insult` (die we nog niet hebben geschreven) wanneer deze wordt ingedrukt en geeft de tekst `"Beledig me opnieuw"`.
 
-- Write the function `new_insult()` which will be called when the button is pressed. You should put this code immediately after your `insult_me()` function, but be careful **not** to indent the first line of the function, otherwise Python will think this code is part of the `insult_me()` function too.
+- Schrijf de functie `new_insult()` die wordt opgeroepen wanneer de knop wordt ingedrukt. Je moet deze code onmiddellijk achter jouw `insult_me()` functie plaatsen, maar let op **niet** de eerste regel van de functie laten inspringen, anders denkt Python dat deze code ook deel uitmaakt van de `insult_me()` functie.
 
     ```python
     def new_insult():
@@ -51,9 +51,9 @@ If you would like to make your insult generator easy to use, you could add a bas
         message.value = new_insult
     ```
 
-  This function calls the `insult_me()` function to generate a new random insult, and then sets the message on the GUI to be the newly generated insult.
+  Deze functie roept de functie `insult_me()` aan om een nieuwe willekeurige belediging te genereren en stelt vervolgens het bericht op de GUI in als de nieuw gegenereerde belediging.
 
-  ![Insult button](images/insult-me-again.png)
+  ![Belediging knop](images/insult-me-again.png)
 
-- Run the program using F5 and enjoy creating a stream of Shakespearean insults at the press of a button! The finished code is [here](resources/shakespeare.py) if you want to check your code.
+- Start het programma met behulp van F5 en geniet van het creëren van een stroom van Shakespeareaanse beledigingen met een druk op de knop! De voltooide code vindt je [hier](resources/shakespeare.py) als je jouw code wilt controleren.
 
