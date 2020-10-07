@@ -1,15 +1,15 @@
-## What you will make
-Ever been lost for words? In this resource you will write a Python script to generate insults, Elizabethan-style.
+## Wat ga je maken
+Ooit niet uit je woorden kunnen komen? In deze bron zul je een Python-script schrijven om beledigingen te genereren, in Elizabethaanse stijl.
 
-## What you will learn
-By creating a Shakespearean insult generator with your Raspberry Pi you will learn:
+## Wat ga je leren
+Door een Shakespeareaanse-beledigingsgenerator met je Raspberry Pi te maken, leer je:
 
-- How to read and write data in CSV format using Python
-- How to manipulate lists
-- How to randomly choose an item from a list
-- How to create a basic GUI (optional)
+- Hoe gegevens in CSV-formaat te lezen en te schrijven met Python
+- Hoe lijsten te manipuleren
+- Hoe willekeurig een item uit een lijst te kiezen
+- Een basis-GUI maken (optioneel)
 
-This resource covers elements from the following strands of the [Raspberry Pi Digital Making Curriculum](https://www.raspberrypi.org/curriculum/):
+Dit project behandelt elementen uit de volgende onderdelen van het [Raspberry Pi Digital Making Curriculum](https://www.raspberrypi.org/curriculum/):
 
-- [Apply abstraction and decomposition to solve more complex problems](https://curriculum.raspberrypi.org/programming/developer/)
+- [Pas abstractie en ontleding toe om complexere problemen op te lossen](https://curriculum.raspberrypi.org/programming/developer/)
 
