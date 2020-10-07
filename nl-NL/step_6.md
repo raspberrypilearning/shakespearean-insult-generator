@@ -1,10 +1,10 @@
-## Open and read from a file
+## Openen en lezen vanuit een bestand
 
-- Open up **Python 3 IDLE**.
+- Open **Python 3 IDLE**.
 
-- Click `File` > `New File` and save the file as `shakespeare.py`.
+- Klik op `Bestand` > `Nieuw bestand` en sla het bestand op als `shakespeare.py`.
 
-- Add the following code to open the file (`insults.csv`) in read mode (`"r"` means *read mode*), read the full contents, and output the result:
+- Voeg de volgende code toe om het bestand (`insults.csv`) in leesmodus te openen (`"r"` betekent *leesmodus*), lees de volledige inhoud en voer het resultaat uit:
 
     ```python
     with open("insults.csv", "r") as f:
@@ -12,19 +12,19 @@
         print(contents)
     ```
 
-- What's the difference between the current line of code...
+- Wat is het verschil tussen de huidige coderegel...
 
   ```Python
   contents = f.read()
   ```
 
-  ...and this line of code?
+  ... en deze coderegel?
 
   ```Python
   contents = f.readline()
   ```
 
-  Change the code and see if you can work out the difference betweeen `read()` and `readline()`.
+  Wijzig de code en kijk of je het verschil kunt vinden tussen `read()` en `readline()`.
 
-- So far, we're able to read the insults from the file in the order they were written, but we can't do much with them. You may have noticed that the different columns forming the parts of the insult were different types of word. The first two columns (A and B) contain **adjectives** (describing words) and the final column (C) contains **nouns**, mostly in this case referring to a 'thing' the person resembles. If we could split them up, we could make insults of the form "Thou \[List A\] \[List B\] [List C]" by choosing a random word from each list. An example might be "Thou impertinent rump-fed miscreant".
+- Tot nu toe kunnen we de beledigingen uit het bestand lezen in de volgorde waarin ze zijn geschreven, maar we kunnen er niet veel mee doen. Je hebt misschien gemerkt dat de verschillende kolommen die de delen van de belediging vormen verschillende soorten woorden waren. De eerste twee kolommen (A en B) bevatten **bijvoeglijke naamwoorden** (die woorden beschrijven) en de laatste kolom (C) bevat **zelfstandige naamwoorden**, meestal in dit geval verwijzend naar een 'ding' waar de persoon op lijkt. Als we ze zouden kunnen opsplitsen, kunnen we beledigingen maken in de vorm "Gij \[Lijst A\] \[Lijst B\] [Lijst C]" door een willekeurig woord uit elke lijst te kiezen. Een voorbeeld zou kunnen zijn: "Gij onbeschaamde achterwerksboer".
 
