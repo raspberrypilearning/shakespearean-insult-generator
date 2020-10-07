@@ -1,4 +1,4 @@
-## Shakespearean insult generator
+## Shakespeare-beledigingsgenerator
 
-Ever been in the frustrating situation of being insulted by someone and wishing you had a bitingly funny zinger to come back with? In this resource you will write a Python script to generate insults, Elizabethan-style.
+Ooit in de frustrerende situatie geweest om door iemand te worden beledigd en wenste je dat je een beetje grappige zin had om te reageren? In deze bron zul je een Python-script schrijven om beledigingen te genereren, in Elizabethaanse stijl.
 
