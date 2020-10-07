@@ -1,31 +1,31 @@
-## Putting your insults into a CSV file
+## Je beledigingen in een CSV-bestand stoppen
 
-You will need to find some suitable Shakespearean words to use. Make sure to only use Shakespearean words as insults - they are witty, intelligent, and unlikely to actually offend your friends! We found a big list of [Shakespearean insults](https://www.theatrefolk.com/freebies/shakespearean-insults.pdf) at [https://www.theatrefolk.com/free-resources/shakespeare](https://www.theatrefolk.com/free-resources/shakespeare).
+Je moet enkele geschikte Shakespeare-woorden vinden om te gebruiken. Zorg ervoor dat je alleen Shakespeare-woorden gebruikt als beledigingen - ze zijn grappig, intelligent en het is onwaarschijnlijk dat ze je vrienden echt beledigen! We hebben een grote lijst van [Shakespearean-beledigingen](https://www.theatrefolk.com/freebies/shakespearean-insults.pdf) op [https://www.theatrefolk.com/free-resources/shakespeare](https://www.theatrefolk.com/free-resources/shakespeare) gevonden.
 
-You can create your own insults CSV file by following the instruction below or download a pre-built [insults.csv](resources/insults.csv) file.
+Je kunt je eigen CSV-bestand met beledigingen maken door de onderstaande instructie te volgen of een vooraf gebouwd [insults.csv](resources/insults.csv) bestand downloaden.
 
-- Now open up a document in a spreadsheet editor. These instructions are for LibreOffice Calc, which is included on the latest distribution of Raspbian, but this process works in a very similar way in other spreadsheet programs such as Microsoft Excel. Copy the first column of insults from the [Shakespearean insults](https://www.theatrefolk.com/freebies/shakespearean-insults.pdf) PDF file. Now right-click on cell A1 in your spreadsheet and select **Paste Special**. In the pop up box which appears, make sure **Unformatted text** is selected before pressing OK. Then press OK again when you're presented with the box below.
+- Open nu een document in een spreadsheet-editor. Deze instructies zijn voor LibreOffice Calc, dat is opgenomen in de nieuwste distributie van Raspbian, maar dit proces werkt op een vergelijkbare manier in andere spreadsheet programma's zoals Microsoft Excel. Kopieer de eerste kolom met beledigingen uit het [Shakespeareaanse beledigingen](https://www.theatrefolk.com/freebies/shakespearean-insults.pdf) PDF-bestand. Klik nu met de rechtermuisknop op cel A1 in uw spreadsheet en selecteer **Plakken speciaal**. Zorg ervoor dat in het pop-upvenster dat verschijnt **Niet-opgemaakte tekst** is geselecteerd voordat je op OK drukt. Druk vervolgens nogmaals op OK wanneer het onderstaande vak wordt weergegeven.
 
-  ![Paste dialogue](images/paste-dialogue.png)
+  ![Dialoog plakken](images/paste-dialogue.png)
 
-  You should see your insult words displayed in the spreadsheet, with one word in each row, like this:
+  Je zou je beledigende woorden in de spreadsheet moeten zien, met één woord in elke rij, zoals dit:
 
-  ![First column of insults](images/first-column.png)
+  ![Eerste kolom met beledigingen](images/first-column.png)
 
 
-- Repeat this for the second and third columns, pasting them into columns B and C of the spreadsheet.
+- Herhaal dit voor de tweede en derde kolom en plak ze in kolom B en C van de spreadsheet.
 
-  ![All columns](images/all-cols.png)
+  ![Alle kolommen](images/all-cols.png)
 
-- Now save your file as "insults" and make sure to change the **File type** drop-down to **Text CSV** before pressing Save.
+- Sla je bestand nu op als "beledigingen" en zorg ervoor dat je de vervolgkeuzelijst **Bestandstype** wijzigt in **Tekst CSV** voordat je op Opslaan drukt.
 
-  ![Save your file](images/saving-file.png)
+  ![Sla je bestand op](images/saving-file.png)
 
-- If a box pops up, choose to save the file in Text CSV format. Press OK on any further pop ups.
+- Als er een vak verschijnt, kies je ervoor om het bestand op te slaan in Text CSV-indeling. Druk op OK bij verdere pop-ups.
 
-  ![Save in text CSV format](images/use-text-csv.png)
+  ![Opslaan in tekst CSV-formaat](images/use-text-csv.png)
 
-- Once your file has been saved, you can check that the data is now in CSV format. Locate the file using the file explorer, then right-click on the file and select "Text editor" to open it up as plain text. You should see the insults you pasted in, separated by commas.
+- Nadat jouw bestand is opgeslagen, kun je controleren of de gegevens nu in CSV-indeling zijn. Zoek het bestand met behulp van de bestandsverkenner, klik vervolgens met de rechtermuisknop op het bestand en selecteer "Teksteditor" om het als gewone tekst te openen. Je zou de beledigingen moeten zien die je hebt geplakt, gescheiden door komma's.
 
-  ![See the CSV format](images/see-format.png)
+  ![Zie het CSV-formaat](images/see-format.png)
 
