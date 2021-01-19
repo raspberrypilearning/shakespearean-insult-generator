@@ -1,5 +1,5 @@
 ## Wat ga je maken
-Ooit niet uit je woorden kunnen komen? In deze bron zul je een Python-script schrijven om beledigingen te genereren, in Elizabethaanse stijl.
+Ooit niet uit je woorden kunnen komen? In dit project zul je een Python-script schrijven om beledigingen te genereren, in Elizabethaanse stijl.
 
 ## Wat ga je leren
 Door een Shakespeareaanse-beledigingsgenerator met je Raspberry Pi te maken, leer je:
