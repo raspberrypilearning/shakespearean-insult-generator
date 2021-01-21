@@ -20,7 +20,7 @@
 
 --- collapse ---
 ---
-title: Toon de code
+title: toon de code
 ---
 
   ```python
@@ -60,7 +60,7 @@ Wanneer je `list_c` uitvoert om het te controleren, zul je iets vreemds opmerken
   list_c.append(words[2])
   ```
 
-  ... en voeg `.strip()` aan het einde van het woord dat je toevoegt, om automatisch de `\n` en alle andere **witruimte-tekens** te verwijderen.
+  ... en voeg `.strip()` toe aan het einde van het woord dat je toevoegt, om automatisch de `\n` en alle andere **witruimte-tekens** te verwijderen.
 
   ```python
   list_c.append( words[2].strip() )

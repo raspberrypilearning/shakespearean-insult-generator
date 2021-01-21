@@ -2,7 +2,7 @@
 
 Nu hebben we drie lijsten, laten we een functie schrijven om uit elke lijst een willekeurig woord te kiezen en een nieuwe belediging te maken.
 
-- Aan het begin van je programma importeer je de `willekeurige` bibliotheek:
+- Aan het begin van je programma importeer je de `random` bibliotheek:
 
   ```python
   import random
