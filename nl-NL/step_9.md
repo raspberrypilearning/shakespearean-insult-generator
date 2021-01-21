@@ -25,25 +25,25 @@ Als je jouw beledigingsgenerator gebruiksvriendelijk wilt maken, kunt je een een
 
 - Verwijder de coderegel die de functie `insult_me()`aanroept.
 
-- Voeg nu wat`tekst` toe om je belediging weer te geven. Deze coderegel moet tussen de `app =` regel en de `app.display()` regel staan:
+- Voeg nu wat `Text` (tekst) toe om je belediging weer te geven. Deze coderegel moet tussen de `app =` regel en de `app.display()` regel staan:
 
   ```python
   message = Text(app, insult_me() )
   ```
 
-  Deze lijn van code wordt een `Text` object, voegt het toe aan de `app`, en roep vervolgens de functie `insult_me()` aan om een weergave te krijgen van de belediging.
+  Deze regel code maakt een `Text` object, voegt het toe aan de `app`, en roep vervolgens de functie `insult_me()` aan om een belediging te kunnen weergeven.
 
   ![Belediging weergegeven in GUI](images/insult-in-gui.png)
 
-- Laten we nu een `drukknop` toevoegen aan de regel direct na de `tekst`.
+- Laten we nu een `PushButton` (drukknop) toevoegen aan de regel direct na de `Text`.
 
   ```python
   button = PushButton(app, new_insult, text="Insult me again")
   ```
 
-  Deze code maakt een `PushButton` object en voegt dit toe aan de `app`. De knop roept de functie `new_insult` (die we nog niet hebben geschreven) wanneer deze wordt ingedrukt en geeft de tekst `"Beledig me opnieuw"`.
+  Deze code maakt een `PushButton` object en voegt dit toe aan de `app`. De knop roept de functie `new_insult` aan (die we nog niet hebben geschreven) wanneer deze wordt ingedrukt en geeft de tekst `"Insult me again"` (Beledig me opnieuw).
 
-- Schrijf de functie `new_insult()` die wordt opgeroepen wanneer de knop wordt ingedrukt. Je moet deze code onmiddellijk achter jouw `insult_me()` functie plaatsen, maar let op **niet** de eerste regel van de functie laten inspringen, anders denkt Python dat deze code ook deel uitmaakt van de `insult_me()` functie.
+- Schrijf de functie `new_insult()` die wordt aangeroepen wanneer de knop wordt ingedrukt. Je moet deze code onmiddellijk achter jouw `insult_me()` functie plaatsen, maar let dat je de eerste regel van de functie **niet** laten inspringen, anders denkt Python dat deze code ook deel uitmaakt van de `insult_me()` functie.
 
     ```python
     def new_insult():
