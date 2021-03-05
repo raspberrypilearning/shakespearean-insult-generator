@@ -7,9 +7,9 @@
 - Agrega el siguiente código para abrir el archivo (`insults.csv`) en modo de lectura (`"r"` significa *modo de lectura*), lee los contenidos completos y genera el resultado:
 
     ```python
-    with open("insults.csv", "r") as f:
-        contents = f.read()
-        print(contents)
+    with open("insultos.csv", "r") as archivo:
+        contenido = archivo.read()
+        print(contenido)
     ```
 
 - ¿Cuál es la diferencia entre la línea actual de código...
