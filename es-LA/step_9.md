@@ -11,7 +11,7 @@ Si deseas hacer que tu generador de insultos sea fácil de usar, podría añadir
 - Ahora al final de tu programa, añade código para crear una `App`. Esta es una simple ventana de interfaz gráfica donde mostraremos tu insulto.
 
   ```python
-  app = App("Shakespearean insult generator")
+  app = App("Generador de insultos Shakespearianos")
   app.display()
   ```
 
