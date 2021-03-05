@@ -20,7 +20,7 @@
 
 --- collapse ---
 ---
-title: toon de code
+title: Toon de code
 ---
 
   ```python
