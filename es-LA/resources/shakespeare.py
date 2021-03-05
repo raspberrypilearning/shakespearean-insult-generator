@@ -23,7 +23,7 @@ with open("insultos.csv", "r") as archivo:
         lista_b.append(palabras[1])
         lista_c.append(palabras[2].strip())
 
-app = App("Shakespearean insult generator")
+app = App("Generador de insultos Shakespearianos")
 mensaje = Text(app, insultame() )
 boton = PushButton(app, nuevo_insulto, text="Insúltame de nuevo")
 app.display()
