@@ -28,8 +28,8 @@ título: Mostrar el código
 lista_b = []
 lista_c = []
 
-with open("insultos.csv", "r") as archivo:
-    for linea in archivo:
+with open("insults.csv", "r") as f:
+    for linea in f:
         palabras = linea.split(",")
         lista_a.append(palabras[0])
         lista_b.append(palabras[1])
