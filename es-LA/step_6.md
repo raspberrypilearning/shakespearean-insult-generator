@@ -7,21 +7,21 @@
 - Agrega el siguiente código para abrir el archivo (`insults.csv`) en modo de lectura (`"r"` significa *modo de lectura*), lee los contenidos completos y genera el resultado:
 
     ```python
-    with open("insultos.csv", "r") as archivo:
-        contenido = archivo.read()
+    with open("insults.csv", "r") as f:
+        contenido = f.read()
         print(contenido)
     ```
 
 - ¿Cuál es la diferencia entre la línea actual de código...
 
   ```Python
-  contenido = archivo.read()
+  contenido = f.read()
   ```
 
   ...y esta línea de código?
 
   ```Python
-  contenido = archivo.readline()
+  contenido = f.readline()
   ```
 
   Cambia el código y comprueba si puedes ver la diferencia entre `read()` y `readline()`.
