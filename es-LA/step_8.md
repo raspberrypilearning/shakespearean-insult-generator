@@ -25,7 +25,7 @@ Ahora tenemos tres listas, vamos a escribir una función para elegir una palabra
 
   ```python
   insulto = "Tú" + palabra_a + palabra_b + palabra_c
-  print (insulto)
+  print(insulto)
   ```
 
 - Si ejecutas tu programa ahora, no pasará nada nuevo. Esto se debe a que el código dentro de una función no será ejecutada hasta que la función sea **llamada**. Encuentra la línea de código en tu programa donde ejecutas `print( lista_a )` y bórrala. En su lugar, llama a la función que acabas de crear:
