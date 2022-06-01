@@ -1,7 +1,8 @@
 ---
 title: Generador de insultos Shakespearianos
 hero_image: images/banner.png
-description: En este recurso escribirás un script Python para generar insultos, estilo Isabelino.
+description: En este recurso escribirás un script Python para generar insultos, estilo
+  Isabelino.
 original_url: https://raspberrypi.org/learning/shakespearean-insult-generator
 theme: red
 duration: 2
@@ -17,13 +18,17 @@ software: python
 version: 3
 last_tested: 2018-04-05
 steps:
-  - title: Introducción
-  - title: Lo que necesitarás
-  - title: Generador de insultos Shakespearianos
-  - title: '¿Qué es un archivo CSV?'
-  - title: Poniendo tus insultos en un archivo CSV
-  - title: Abrir y leer desde un archivo
-  - title: Listas en Python
-  - title: Elegir aleatoriamente un insulto
-  - title: Mostrar el resultado en una interfaz gráfica
-  - title: '¿Qué sigue?'
+- title: Introducción
+- title: Lo que necesitarás
+- title: Generador de insultos Shakespearianos
+- title: "¿Qué es un archivo CSV?"
+  completion:
+  - engaged
+- title: Poniendo tus insultos en un archivo CSV
+- title: Abrir y leer desde un archivo
+- title: Listas en Python
+- title: Elegir aleatoriamente un insulto
+- title: Mostrar el resultado en una interfaz gráfica
+  completion:
+  - internal
+- title: "¿Qué sigue?"
