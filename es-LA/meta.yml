@@ -20,13 +20,15 @@ last_tested: 2018-04-05
 steps:
 - title: Introducción
 - title: Lo que necesitarás
-  completion: engaged
 - title: Generador de insultos Shakespearianos
 - title: "¿Qué es un archivo CSV?"
+  completion:
+  - engaged
 - title: Poniendo tus insultos en un archivo CSV
 - title: Abrir y leer desde un archivo
 - title: Listas en Python
 - title: Elegir aleatoriamente un insulto
 - title: Mostrar el resultado en una interfaz gráfica
-  completion: internal
+  completion:
+  - internal
 - title: "¿Qué sigue?"

@@ -20,13 +20,15 @@ last_tested: 2018-04-05
 steps:
 - title: Inleiding
 - title: Wat heb je nodig
-  completion: engaged
 - title: Shakespeare-beledigingsgenerator
 - title: Wat is een CSV-bestand?
+  completion:
+  - engaged
 - title: Je beledigingen in een CSV-bestand stoppen
 - title: Openen en lezen vanuit een bestand
 - title: Lijsten in Python
 - title: Willekeurig een belediging kiezen
 - title: Het resultaat weergeven op een GUI
-  completion: internal
+  completion:
+  - internal
 - title: Wat kun je verder nog doen
