@@ -8,7 +8,15 @@ Open the <a href="https://editor.raspberrypi.org/en/projects/shakespearean-insul
 
 --- task ---
 
-Add some code to open the file (`insults.csv`) in read mode (`"r"` means *read mode*), read the full contents, and output the result:
+In the sidebar, click on the `insults.csv` file and take a look at the contents. 
+
+![The code editor sidebar with a pink arrow pointing to the file 'insults.csv'](images/insults.png)
+
+--- /task ---
+
+--- task ---
+
+Click back to the `main.py` file. Add some code to open the insults file in read mode (`"r"` means *read mode*), read a line, and output the result:
 
 --- code ---
 ---
@@ -24,7 +32,9 @@ with open("insults.csv", "r") as f:
 
 --- /task ---
 
+--- task ---
 
+Click **Run** and you should see the first line of the file displayed in the output section.
 
-So far, we're able to read the insults from the file in the order they were written, but we can't do much with them. You may have noticed that the different columns forming the parts of the insult were different types of word. The first two columns (A and B) contain **adjectives** (describing words) and the final column (C) contains **nouns**, mostly in this case referring to a 'thing' the person resembles. If we could split them up, we could make insults of the form "Thou [List A] [List B] [List C]" by choosing a random word from each list. An example might be "Thou impertinent rump-fed miscreant".
+--- /task ---
 
