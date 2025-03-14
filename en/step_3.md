@@ -1,58 +1,71 @@
 ## Lists in Python
 
-Each line contains three words - the first two are **adjectives** (describing words)
+Each line contains three words - the first two are **adjectives** (describing words) and the last is a **noun** (a thing). 
 
 --- task ---
 
+Change your code so that it only prints the *first** line in the list. The numbering of the lines always **starts from zero** so the first line in the list is `lines[0]`.
+
+--- code ---
+---
+language: python
+line_numbers: true
+line_number_start: 1
+line_highlights: 3
+---
+with open("insults.csv", "r") as f:
+  lines = f.readlines()
+  print(lines[0])
+
+--- /code ---
 
 
 --- /task ---
 
---- collapse ---
+--- task ---
+
+Click **Run** and you should see `artless,base-court,apple-john` in the output area.
+
+--- /task ---
+
+--- task ---
+
+You can find out how many lines there are in the file by printing the `len()` which is the **length**. Add this code:
+
+--- code ---
 ---
-title: Show the code
+language: python
+line_numbers: true
+line_number_start: 1
+line_highlights: 4
 ---
+with open("insults.csv", "r") as f:
+  lines = f.readlines()
+  print(lines[0])
+  print(len(lines))
 
-  ```python
-  list_a = []
-  list_b = []
-  list_c = []
+--- /code ---
 
-  with open("insults.csv", "r") as f:
-      for line in f:
-          words = line.split(",")
-          list_a.append(words[0])
-          list_b.append(words[1])
-          list_c.append(words[2])
+--- /task ---
 
-  print( list_a )
+--- task ---
 
+Try changing the number inside the [square brackets] to another number between 0 and one less than the length. Press **Run** and you should see a different line printed.
 
-  ```
+--- code ---
+---
+language: python
+line_numbers: true
+line_number_start: 1
+line_highlights: 3
+---
+with open("insults.csv", "r") as f:
+  lines = f.readlines()
+  print(lines[32])
+  print(len(lines))
 
---- /collapse ---
+--- /code ---
 
-- Save and run your program by pressing F5. You should find that the program outputs a list of all of the words you put in column A.
+--- /task ---
 
-  ![Print list A](images/output-a.png)
-
-- Change your code to print out and check lists B and C too. You should spot a problem.
-
-When you output `list_c` to check it, you will notice something strange - an extra `\n` character has been added to the end of each of the words:
-
-  ![Print list C](images/output-c.png)
-
-  The `\n` character is not a surprise when you find out that it means "new line". It's there because in our original CSV file, each group of three insult words was stored on a *new line*! However, we don't want to display it in our insult, so we can add some code to get rid of it.
-
-- Find this line in your code:
-
-  ```python
-  list_c.append(words[2])
-  ```
-
-  ...and add `.strip()` on the end of the word you're appending, to automatically strip out the `\n` and any other **whitespace characters**.
-
-  ```python
-  list_c.append( words[2].strip() )
-  ```
 

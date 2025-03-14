@@ -16,7 +16,7 @@ In the sidebar, click on the `insults.csv` file and take a look at the contents.
 
 --- task ---
 
-Click back to the `main.py` file. Add some code to open `insults.csv` in read mode `"r"`, read a line, and output the result:
+Click back to the `main.py` file. Add some code to open `insults.csv` in read mode `"r"`, read all of the contents and output the result:
 
 --- code ---
 ---
@@ -25,8 +25,8 @@ line_numbers: true
 line_number_start: 1
 ---
 with open("insults.csv", "r") as f:
-  line = f.readline()
-  print(line)
+  lines = f.readlines()
+  print(lines)
 
 --- /code ---
 
@@ -34,7 +34,7 @@ with open("insults.csv", "r") as f:
 
 --- task ---
 
-Click **Run** and you should see the first line of the file displayed in the output section.
+Click **Run** and you should see the contents of the file displayed in the output section. It will look a little messy!
 
 --- /task ---
 
