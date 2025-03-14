@@ -4,18 +4,19 @@ Each line contains three words - the first two are **adjectives** (describing wo
 
 --- task ---
 
-Change your code so that it only prints the *first** line in the list. The numbering of the lines always **starts from zero** so the first line in the list is `lines[0]`.
+Change your code so that it only prints the first line in the list. The numbering of the lines always **starts from zero** so the first line in the list is `lines[0]`.
 
 --- code ---
 ---
 language: python
 line_numbers: true
 line_number_start: 1
-line_highlights: 3
+line_highlights: 3-4
 ---
 with open("insults.csv", "r") as f:
   lines = f.readlines()
-  print(lines[0])
+  line_number = 0
+  print(lines[line_number])
 
 --- /code ---
 
@@ -28,9 +29,11 @@ Click **Run** and you should see `artless,base-court,apple-john` in the output a
 
 --- /task ---
 
+
 --- task ---
 
-You can find out how many lines there are in the file by printing the `len()` which is the **length**. Add this code:
+Delete the `print` statement. Add some new code to split the line up whereever there is a comma, and save it as a list of `words`
+
 
 --- code ---
 ---
@@ -41,31 +44,34 @@ line_highlights: 4
 ---
 with open("insults.csv", "r") as f:
   lines = f.readlines()
-  print(lines[0])
-  print(len(lines))
+  line_number = 0
+  words = lines[line_number].split(",")
 
 --- /code ---
 
 --- /task ---
 
+
 --- task ---
 
-Try changing the number inside the [square brackets] to another number between 0 and one less than the length. Press **Run** and you should see a different line printed.
+Finally, add a new print statement to print out `Thou ` and then each word in the list of words in turn:
 
 --- code ---
 ---
 language: python
 line_numbers: true
 line_number_start: 1
-line_highlights: 3
+line_highlights: 5
 ---
 with open("insults.csv", "r") as f:
   lines = f.readlines()
-  print(lines[32])
-  print(len(lines))
+  line_number = 0
+  words = lines[line_number].split(",")
+  print(f"Thou {words[0]} {words[1]} {words[2]}")
 
 --- /code ---
 
 --- /task ---
+
 
 
