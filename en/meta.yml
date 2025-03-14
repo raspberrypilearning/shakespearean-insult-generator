@@ -19,18 +19,13 @@ version: 3
 last_tested: 2018-04-05
 steps:
 - title: Introduction
-- title: What you will need
-- title: Shakespearean insult generator
-- title: What is a CSV file?
+- title: Open and read from a file
   completion:
   - engaged
-- title: Putting your insults into a CSV file
-- title: Open and read from a file
 - title: Lists in Python
 - title: Randomly choosing an insult
-- title: Displaying the result on a GUI
   completion:
   - internal
-- title: What next
+- title: What can you do now?
   completion:
   - external

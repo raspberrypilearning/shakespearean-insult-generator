@@ -1,22 +1,54 @@
-## What is a CSV file?
+## Randomly choosing an insult
 
-A **Comma Separated Values** file (or CSV file as it's commonly known) is a very basic way of storing data for use in a Python program. It's simply a text file where the contents are in a specific format: separated by commas. For instance, this could be an example of data stored in a CSV file:
+Now we have three lists, let's write a function to choose a random word from each list and create a new insult.
 
-```CSV
-john, paul, george, ringo
-```
+- At the very start of your program, import the `random` library:
 
-Sometimes the values are **encapsulated**. For example, they may be encapsulated with quotes like this:
+  ```python
+  import random
+  ```
 
-```CSV
-"john", "paul", "george", "ringo"
-```
+- Immediately underneath that, define a function called `insult_me()`:
 
-This is usually because the data itself contains commas, so we need to avoid confusion between where a comma represents a break between different data items, and where it's simply part of the data. For example, in this CSV file encapsulation is definitely necessary:
+    ```python
+    def insult_me():
+    ```
 
-```CSV
-"Tabitha, slayer of mice", "Tiddles, drinker of milk", "Tiffany, leaver of hairballs"
-```
+- We can tell Python which code is inside the function by *indenting* the lines of code after the function definition. Add some code *inside the function* to choose a random word from `list_a`, `list_b`, and `list_c`. The first word has been done for you in the example below, but you need to work out how to choose a random word from lists B and C yourself.
 
-The most basic way of creating a CSV file is to type data into a text file in CSV format, and then save the file with the extension `.csv`. Alternatively, you could use a program such as LibreOffice Calc or Microsoft Excel to create and save a file in CSV format.
+    ```python
+    def insult_me():
+        word_a = random.choice(list_a)
+    ```
+
+- Still writing your code *inside the function*, construct your insult, using the *concatenation* symbol (`+`) to join the words together. Then add a `print` statement to display the insult:
+
+  ```python
+  insult = "Thou" + word_a + word_b + word_c
+  print(insult)
+  ```
+
+- If you run your program now, nothing new will happen. This is because code inside a function won't be executed until the function is **called**. Find the line of code in your program where you `print( list_a )` and delete it. In its place, call the function you just created:
+
+  ```python
+  insult_me()
+  ```
+
+- Save your program and run it using F5. You should see a random insult, but there's a problem - the words are all stuck together with no spaces in between!
+
+  ![Unspaced insult](images/unspaced-insult.png)
+
+  The `+` is like the programmer's glue - it joins **strings** together. The string for a space is `" "`, so we could alter the code and put a space between `word_a` and `word_b` like this:
+
+  ```python
+  insult = "Thou" + word_a + " " + word_b + word_c
+  ```
+
+  See if you can work out where to *concatenate* more spaces to make the insult display properly. You could even concatenate a `"!"` onto the end of your insult if you like.
+
+- Save and run your program using F5. You should see a random insult appear!
+
+    ![Generate an insult](images/insult.png)
+
+    Run your program again and you should see a different insult each time.
 
