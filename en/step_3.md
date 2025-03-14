@@ -54,7 +54,7 @@ with open("insults.csv", "r") as f:
 
 --- task ---
 
-Finally, add a new print statement to print out `Thou ` and then each word in the list of words in turn:
+Finally, add a new print statement to print out `Thou`, followed by each word in the list of words in turn. Click **Run** to see the result.
 
 --- code ---
 ---

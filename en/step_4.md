@@ -3,7 +3,7 @@
 
 --- task ---
 
-You can find out how many lines there are in the file by printing the `len()` which is the **length**. Add this code:
+You can find out how many lines there are in the file by printing the `len()` which is the **length**. Add this code, then click **Run** to see the answer:
 
 --- code ---
 ---
@@ -14,7 +14,7 @@ line_highlights: 4
 ---
 with open("insults.csv", "r") as f:
   lines = f.readlines()
-  print(lines[0])
+  line_number = 0
   print(len(lines))
 
 --- /code ---
@@ -23,7 +23,7 @@ with open("insults.csv", "r") as f:
 
 --- task ---
 
-Try changing the number inside the [square brackets] to another number between 0 and one less than the length. Press **Run** and you should see a different line printed.
+Try changing the `line_number` variable to another number between 0 and one less than the length. Press **Run** and you should see a different insult printed.
 
 --- code ---
 ---
@@ -34,8 +34,10 @@ line_highlights: 3
 ---
 with open("insults.csv", "r") as f:
   lines = f.readlines()
-  print(lines[32])
-  print(len(lines))
+  line_number = 32
+  words = lines[line_number].split(",")
+  print(f"Thou {words[0]} {words[1]} {words[2]}")
+
 
 --- /code ---
 
