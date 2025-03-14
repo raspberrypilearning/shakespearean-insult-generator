@@ -1,29 +1,12 @@
 ## Lists in Python
 
+Each line contains three words - the first two are **adjectives** (describing words)
+
+--- task ---
 
 
 
-So far, we're able to read the insults from the file in the order they were written, but we can't do much with them. You may have noticed that the different columns forming the parts of the insult were different types of word. The first two columns (A and B) contain **adjectives** (describing words) and the final column (C) contains **nouns**, mostly in this case referring to a 'thing' the person resembles. If we could split them up, we could make insults of the form "Thou [List A] [List B] [List C]" by choosing a random word from each list. An example might be "Thou impertinent rump-fed miscreant".
-
-
-
-- We will add some code to read the file line by line and split each column into a separate list. Try planning this yourself in pseudocode before looking at our solution below:
-
-  ```
-  CREATE list_a, list_b, list_c as BLANK LISTS
-  OPEN insults.csv in read mode
-    FOR each line in the file, READ INTO variable line
-      words = SPLIT line EVERY "," INTO A LIST
-      APPEND first word IN words TO list_a
-      APPEND second word IN words TO list_b
-      APPEND third word IN words TO list_c
-    END WHILE
-  PRINT list_a
-  ```
-
-  The most unfamiliar part of this code is probably `words = SPLIT line EVERY "," INTO A LIST`. Here we will use Python's built-in `split()` function to split up the line of text wherever there's a comma, and save the results as a list called `words`.
-
-- Here is the corresponding Python code for the code we planned above. Once again, you could have a go at translating your pseudocode into Python before you look at the solution below. Delete your existing code and replace it with the new code:
+--- /task ---
 
 --- collapse ---
 ---
