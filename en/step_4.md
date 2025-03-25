@@ -75,7 +75,7 @@ Now use the `randint` function from the `random` library in your code to choose 
 language: python
 line_numbers: true
 line_number_start: 1
-line_highlights: 3
+line_highlights: 4
 ---
 import random
 with open("insults.csv", "r") as f:
