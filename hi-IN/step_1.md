@@ -1,15 +1,10 @@
 ## आप क्या बनाएँगे
+
 कभी शब्दों के लिए खोए हो? इस संसाधन में आप अपमान उत्पन्न करने के लिए Python स्क्रिप्ट लिखेंगे, एलिज़ाबेथन-शैली में।
 
-## आप क्या सीखेंगे
-अपने Raspberry Pi की मदद से एक शेक्सपियरेन अपमान उत्पादक बनाने से आप सीखेंगे:
 
-- Python का उपयोग करके CSV फॉर्मेट में डेटा कैसे पढ़ें और लिखें
-- सूचियों में हेरफेर कैसे करें
-- किसी सूची से आइटम को निरुद्देश्यता से कैसे चुनें
-- बुनियादी GUI कैसे बनाएं (वैकल्पिक)
+--- no-print --- <iframe src="https://editor.raspberrypi.org/en/embed/viewer/shakespearean-insult-complete" width="400" height="710" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
+</iframe>
 
-इस संसाधन में [Raspberry Pi Digital Making Curriculum](https://www.raspberrypi.org/curriculum/) के निम्नलिखित तत्वों के पहलू शामिल हैं:
 
-- [अधिक कठिन समस्याओं को हल करने के लिए अमूर्त और अपघटन लागू करें](https://curriculum.raspberrypi.org/programming/developer/)
-
+--- /no-print ---
