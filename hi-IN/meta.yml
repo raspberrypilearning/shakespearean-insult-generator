@@ -20,20 +20,16 @@ steps:
   - 
     title: भूमिका
   - 
-    title: आपको किन चीज़ों की आवश्यकता होगी
+    title: Open and read from a file
+    completion:
+      - engaged
   - 
-    title: शेक्सपियरेन अपमान उत्पादक
+    title: Lists in Python
   - 
-    title: CSV फ़ाइल क्या है?
+    title: Randomly choosing an insult
+    completion:
+      - internal
   - 
-    title: अपने अपमानों को एक CSV फ़ाइल में डालना
-  - 
-    title: एक फाइल को खोलें और पढ़ें
-  - 
-    title: Python में सूचियाँ
-  - 
-    title: निरुद्देश्यता से अपमान चुनना
-  - 
-    title: GUI पर परिणाम प्रदर्शित करना
-  - 
-    title: आगे क्या
+    title: What can you do now?
+    completion:
+      - external
