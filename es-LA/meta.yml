@@ -20,20 +20,16 @@ steps:
   - 
     title: Introducción
   - 
-    title: Lo que necesitarás
+    title: Open and read from a file
+    completion:
+      - engaged
   - 
-    title: Generador de insultos Shakespearianos
+    title: Lists in Python
   - 
-    title: '¿Qué es un archivo CSV?'
+    title: Randomly choosing an insult
+    completion:
+      - internal
   - 
-    title: Poniendo tus insultos en un archivo CSV
-  - 
-    title: Abrir y leer desde un archivo
-  - 
-    title: Listas en Python
-  - 
-    title: Elegir aleatoriamente un insulto
-  - 
-    title: Mostrar el resultado en una interfaz gráfica
-  - 
-    title: '¿Qué sigue?'
+    title: What can you do now?
+    completion:
+      - external
