@@ -1,22 +1,70 @@
-## CSV फ़ाइल क्या है?
+## Randomly choosing an insult
 
-एक **Comma Separated Values** फ़ाइल (या CSV फ़ाइल जैसा कि आमतौर पर जाना जाता है) Python प्रोग्राम में उपयोग करने के लिए डेटा संग्रहीत करने का एक बहुत ही बुनियादी तरीका है। यह केवल एक टेक्स्ट फ़ाइल है जहाँ सामग्री एक विशिष्ट प्रारूप में होती है: अल्पविराम द्वारा अलग की गयी। उदाहरण के लिए, यह CSV फ़ाइल में संग्रहीत डेटा का एक उदाहरण हो सकता है:
 
-```CSV
-जॉन, पॉल, जॉर्ज, रिंगो
-```
+--- task ---
 
-कभी-कभी मान **संपुटित** किये गए होते हैं । उदाहरण के लिए, वे इस तरह उद्धरण के साथ संपुटित किये जा सकते हैं:
+You can find out how many lines there are in the file by printing the `len()` which is the **length**. Add this code, then click **Run** to see the answer. Delete this code when you know how many lines there are.
 
-```CSV
-"जॉन", "पॉल", "जॉर्ज", "रिंगो"
-```
+--- code ---
+---
+language: python line_numbers: true line_number_start: 1
+line_highlights: 4
+---
+with open("insults.csv", "r") as f: lines = f.readlines() line_number = 0 print(len(lines))
 
-यह आमतौर पर इसलिए होता है क्योंकि डेटा में ही अल्पविराम होते हैं, इसलिए हमें इस भ्रम से बचने की आवश्यकता है कि कहाँ अल्पविराम अलग-अलग डेटा आइटम्स के बीच विराम का प्रतिनिधित्व करता है, और जहाँ यह डेटा का केवल एक हिस्सा है। उदाहरण के लिए, इस CSV file में संपुटित करना निश्चित रूप से आवश्यक है:
+--- /code ---
 
-```CSV
-"तबिता, चूहों का कातिल", "टिडल्स, दूध पीने वाला", "टिफ़नी, बालों के गुच्छे छोड़ने वाली"
-```
+--- /task ---
 
-CSV फ़ाइल बनाने का सबसे मूल तरीका है CSV प्रारूप में डेटा को किसी टेक्स्ट फ़ाइल में टाइप करना, और फिर फ़ाइल को `.csv` एक्सटेंशन के साथ सहेजना। वैकल्पिक रूप से, आप CSV प्रारूप में फ़ाइल बनाने और सहेजने के लिए LibreOffice Calc या Microsoft Excel जैसे प्रोग्राम का उपयोग कर सकते हैं।
+--- task ---
 
+Try changing the `line_number` variable to another number between 0 and one less than the length.
+
+--- code ---
+---
+language: python line_numbers: true line_number_start: 1
+line_highlights: 3
+---
+with open("insults.csv", "r") as f: lines = f.readlines() line_number = 32 words = lines[line_number].split(",") print(f"Thou {words[0]} {words[1]} {words[2]}")
+
+
+--- /code ---
+
+--- /task ---
+
+--- task ---
+
+Click **Run** and you should see a different insult printed.
+
+--- /task ---
+
+--- task ---
+
+On the first line of your code, add some code to import the `random` library:
+
+--- code ---
+---
+language: python line_numbers: true line_number_start: 1
+line_highlights: 1
+---
+import random with open("insults.csv", "r") as f: --- /code ---
+
+--- /task ---
+
+--- task ---
+
+Now use the `randint` function from the `random` library in your code to choose a random line from the file to generate the insult. The line chosen will be a random line between 0 and the number of lines available minus one.
+
+--- code ---
+---
+language: python line_numbers: true line_number_start: 1
+line_highlights: 4
+---
+import random with open("insults.csv", "r") as f: lines = f.readlines() line_number = random.randint(0, len(lines)-1) words = lines[line_number].split(",") print(f"Thou {words[0]} {words[1]} {words[2]}")
+
+
+--- /code ---
+
+--- /task ---
+
+The random choice needs to be between 0 and the length minus one because the line numbering starts at 0. For example, in the list `['a', 'b', 'c']`, the length of the list is 3 because it contains 3 items, but the last item in the list is numberered `2` because the numbering system starts with 0.
