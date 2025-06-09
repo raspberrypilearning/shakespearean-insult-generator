@@ -20,20 +20,16 @@ steps:
   - 
     title: Inleiding
   - 
-    title: Wat heb je nodig
+    title: Open and read from a file
+    completion:
+      - engaged
   - 
-    title: Shakespeare-beledigingsgenerator
+    title: Lists in Python
   - 
-    title: Wat is een CSV-bestand?
+    title: Randomly choosing an insult
+    completion:
+      - internal
   - 
-    title: Je beledigingen in een CSV-bestand stoppen
-  - 
-    title: Openen en lezen vanuit een bestand
-  - 
-    title: Lijsten in Python
-  - 
-    title: Willekeurig een belediging kiezen
-  - 
-    title: Het resultaat weergeven op een GUI
-  - 
-    title: Wat kun je verder nog doen
+    title: What can you do now?
+    completion:
+      - external
