@@ -1,22 +1,70 @@
-## Wat is een CSV-bestand?
+## Randomly choosing an insult
 
-Een **Comma Separated Values** bestand (of CSV-bestand zoals het algemeen bekend is) is een zeer eenvoudige manier om gegevens op te slaan voor gebruik in een Python-programma. Het is gewoon een tekstbestand waarvan de inhoud een specifiek formaat heeft: gescheiden door komma's. Dit kan bijvoorbeeld een voorbeeld zijn van gegevens die zijn opgeslagen in een CSV-bestand:
 
-```CSV
-John, Paul, George, Ringo
-```
+--- task ---
 
-Soms zijn de waarden **ingesloten**. Ze kunnen bijvoorbeeld worden ingesloten in aanhalingstekens zoals deze:
+You can find out how many lines there are in the file by printing the `len()` which is the **length**. Add this code, then click **Run** to see the answer. Delete this code when you know how many lines there are.
 
-```CSV
-"john", "paul", "george", "ringo"
-```
+--- code ---
+---
+language: python line_numbers: true line_number_start: 1
+line_highlights: 4
+---
+with open("insults.csv", "r") as f: lines = f.readlines() line_number = 0 print(len(lines))
 
-Dit komt meestal omdat de gegevens zelf komma's bevatten, dus we moeten verwarring vermijden tussen waar een komma een breuk vertegenwoordigt tussen verschillende gegevensitems, en waar het gewoon een deel van de gegevens is. In dit CSV-bestand is insluiting bijvoorbeeld absoluut noodzakelijk:
+--- /code ---
 
-```CSV
-"Tabitha, slayer of mice", "Tiddles, drinker of milk", "Tiffany, leaver of hairballs"
-```
+--- /task ---
 
-De meest eenvoudige manier om een CSV-bestand te maken, is door gegevens in een tekstbestand in CSV-indeling te typen en het bestand vervolgens op te slaan met de extensie `.csv`. Als alternatief kun je een programma zoals LibreOffice Calc of Microsoft Excel gebruiken om een bestand in CSV-indeling te maken en op te slaan.
+--- task ---
 
+Try changing the `line_number` variable to another number between 0 and one less than the length.
+
+--- code ---
+---
+language: python line_numbers: true line_number_start: 1
+line_highlights: 3
+---
+with open("insults.csv", "r") as f: lines = f.readlines() line_number = 32 words = lines[line_number].split(",") print(f"Thou {words[0]} {words[1]} {words[2]}")
+
+
+--- /code ---
+
+--- /task ---
+
+--- task ---
+
+Click **Run** and you should see a different insult printed.
+
+--- /task ---
+
+--- task ---
+
+On the first line of your code, add some code to import the `random` library:
+
+--- code ---
+---
+language: python line_numbers: true line_number_start: 1
+line_highlights: 1
+---
+import random with open("insults.csv", "r") as f: --- /code ---
+
+--- /task ---
+
+--- task ---
+
+Now use the `randint` function from the `random` library in your code to choose a random line from the file to generate the insult. The line chosen will be a random line between 0 and the number of lines available minus one.
+
+--- code ---
+---
+language: python line_numbers: true line_number_start: 1
+line_highlights: 4
+---
+import random with open("insults.csv", "r") as f: lines = f.readlines() line_number = random.randint(0, len(lines)-1) words = lines[line_number].split(",") print(f"Thou {words[0]} {words[1]} {words[2]}")
+
+
+--- /code ---
+
+--- /task ---
+
+The random choice needs to be between 0 and the length minus one because the line numbering starts at 0. For example, in the list `['a', 'b', 'c']`, the length of the list is 3 because it contains 3 items, but the last item in the list is numberered `2` because the numbering system starts with 0.
