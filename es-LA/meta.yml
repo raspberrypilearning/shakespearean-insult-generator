@@ -31,4 +31,3 @@ steps:
 - title: Mostrar el resultado en una interfaz gráfica
   completion:
   - internal
-- title: "¿Qué sigue?"
